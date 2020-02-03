@@ -10,12 +10,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>Weather Dashboard</header>
-    
-        <div class="row col-md-3" id="search-group">
+    <header id="header-weather">Weather Dashboard</header>
+        <div class="row col-md-4" id="search-group">
             <label>Search for a City:</label>
-            <input class="form-control" type="text" placeholder="Default input"><button class="btn btn-primary"></button></div>
-    
+        <div class="row col-md-12">
+            <input class="form-control" id="form-input" type="text" placeholder="Enter city"><button class="btn btn-primary fas fa-search"></button></div>
+            <br><br>
+            <div class="card" style="width: 25rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Austin</li>
+                <li class="list-group-item">Chicago</li>
+                <li class="list-group-item">New York</li>
+                <li class="list-group-item">Orlando</li>
+                <li class="list-group-item">San Francisco</li>
+                <li class="list-group-item">Seattle</li>
+                <li class="list-group-item">Denver</li>
+                <li class="list-group-item">Atlanta</li>
+              </ul>
+            </div>
+        </div>
+        
         <div class="row col-md-8" id="data-results"></div>
 
     <script src="script.js"></script>
