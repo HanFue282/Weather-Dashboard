@@ -1,0 +1,21 @@
+header {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    background-color: darkblue;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#search-group {
+    background-color: lightgray;
+}
+
+#data-results {
+    background-color: white;
+}
+
+#search-group {
+    padding-left: 30px;
+}
