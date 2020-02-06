@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header-weather">Weather Dashboard</header>
+    <div class="container">
+        <div class="row" id="search-group">
+            <div class="col-md-4">
+                <label class="label1">Search for a City:</label>
+                    <input class="form-control" id="form-input" type="text" placeholder="Enter city"><button class="btn btn-primary fas fa-search"></button></input>
+                <br><br>
+                <div class="card" style="width: 21rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item austin">
+                            <a class="nav-item nav-link" href="austin.html">Austin</a> 
+                        </li>
+                        <li class="list-group-item chicago">
+                            <a class="nav-item nav-link" href="chicago.html">Chicago</a>
+                        </li>
+                        <li class="list-group-item new-york">
+                            <a class="nav-item nav-link"  href="new-york.html">New York</a> 
+                        </li>
+                        <li class="list-group-item orlanda">
+                            <a class="nav-item nav-link" href="orlanda.html">Orlando</a>
+                        </li>
+                        <li class="list-group-item san-francisco">
+                            <a class="nav-item nav-link active" href="san-francisco.html">San Francisco</a>
+                        </li>
+                        <li class="list-group-item seattle">
+                            <a class="nav-item nav-link" href="seattle.html">Seattle</a>
+                        </li>
+                        <li class="list-group-item denver">
+                            <a class="nav-item nav-link" href="denver.html">Denver</a> 
+                        </li>
+                        <li class="list-group-item atlanta">
+                            <a class="nav-item nav-link" href="atlanta.html">Atlanta</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card" style="width: 70rem;">
+                    <ul class="list-group list-group-flush ">
+                      <p class="city" style="font-weight: bold; font-size: 40px;"></p>
+                        <p class="temp"></p>
+                        <p class="tempF"></p>
+                        <p class="humidity"></p>
+                        <p class="wind-speed"></p>
+                        <p class="uv-index"></p>
+                    </ul>
+                </div>
+        <div class="row day-forcast">
+            <label class="label2" style="width: 100%; height: 50%">5-Day Forecast:</label>
+                <div class="col-md-2">
+                    <div class="card" style="width: 10rem;">
+                        <p class="date"></p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style="width: 10rem;">
+                        <p class="date"></p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style="width: 10rem;">
+                        <p class="date"></p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style="width: 10rem;">
+                        <p class="date"></p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="card" style="width: 10rem;">
+                        <p class="date"></p>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=SanFrancisco&APPID=84d508184938f06ffab36d310a17e774";
+    var forcastURL =
+
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    }).then(function(response) {
+    $(".city").text(response.name);
+    $(".temp").text("Temperature (F): " + response.main.temp);
+    $(".humidity").text("Humidity: " + response.main.humidity);
+    $(".wind-speed").text("Wind Speed: " + response.wind.speed);
+
+    var tempF = Math.floor((response.main.temp - 273.15) *1.80 + 32);
+    $(".tempF").text("Temperature (K): " + tempF);
+
+    console.log("Wind Speed: " + response.wind.speed);
+    console.log("Humidity: " + response.main.humidity);
+    console.log("Temperature (F): " + response.main.temp);
+  });
+
+  $.ajax({
+      url: forcastURL,
+      method: "GET"
+  }).then(function(response) {
+
+
+
+  });
+    
+    
+    </script>
+</body>
+</html>
