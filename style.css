@@ -51,7 +51,7 @@ p {
 }
 
 .col-md-2 {
-    color: blue;
+    color: black;
 }
 
 .date {
@@ -69,3 +69,4 @@ p {
 .active {
     color: blueviolet;
 }
+
