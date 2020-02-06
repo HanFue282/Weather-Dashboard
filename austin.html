@@ -19,14 +19,30 @@
                 <br><br>
                 <div class="card" style="width: 21rem;">
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item austin">Austin</li>
-                        <li class="list-group-item chicago">Chicago</li>
-                        <li class="list-group-item new-york">New York</li>
-                        <li class="list-group-item orlanda">Orlando</li>
-                        <li class="list-group-item san-francisco">San Francisco</li>
-                        <li class="list-group-item seattle">Seattle</li>
-                        <li class="list-group-item denver">Denver</li>
-                        <li class="list-group-item atlanta">Atlanta</li>
+                        <li class="list-group-item austin">
+                            <a class="nav-item nav-link active" href="austin.html">Austin</a> 
+                        </li>
+                        <li class="list-group-item chicago">
+                            <a class="nav-item nav-link" href="chicago.html">Chicago</a>
+                        </li>
+                        <li class="list-group-item new-york">
+                            <a class="nav-item nav-link"  href="new-york.html">New York</a> 
+                        </li>
+                        <li class="list-group-item orlanda">
+                            <a class="nav-item nav-link" href="orlanda.html">Orlando</a>
+                        </li>
+                        <li class="list-group-item san-francisco">
+                            <a class="nav-item nav-link" href="san-francisco.html">San Francisco</a>
+                        </li>
+                        <li class="list-group-item seattle">
+                            <a class="nav-item nav-link" href="seattle.html">Seattle</a>
+                        </li>
+                        <li class="list-group-item denver">
+                            <a class="nav-item nav-link" href="denver.html">Denver</a> 
+                        </li>
+                        <li class="list-group-item atlanta">
+                            <a class="nav-item nav-link" href="atlanta.html">Atlanta</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -74,7 +90,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <script>
-    var cityInput = $(this).attr("city-name");
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=Austin&APPID=84d508184938f06ffab36d310a17e774";
     var forcastURL =
 
@@ -100,7 +115,7 @@
       method: "GET"
   }).then(function(response) {
 
-    
+
 
   });
     
