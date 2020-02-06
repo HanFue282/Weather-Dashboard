@@ -8,22 +8,27 @@
     padding-bottom: 5px;
 }
 
-#search-group {
+.container {
+    margin-left: 5px;
+    margin-right: 0px;
+}
+
+.col-md-4 {
     background-color: lightgray;
-}
-
-#data-results {
-    background-color: white;
-}
-
-#search-group {
-    padding-left: 30px;
     padding-top: 10px;
 }
 
-label {
+.label1 {
     font-weight: 700;
     color: black;
+}
+
+.label2 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: start;
+    padding-top: 10px;
+    padding-left: 20px;
 }
 
 #form-input {
@@ -34,4 +39,29 @@ label {
 button {
     width: 40px;
     height: 40px;
+}
+
+.col-md-8 {
+    padding-top: 10px;
+}
+
+p {
+    padding-top: 13px;
+    padding-left: 30px;
+}
+
+.col-md-2 {
+    color: blue;
+}
+
+.date {
+    font-weight: bold; 
+    font-size: 20px; 
+    height: 220px; 
+    padding-left: 10px; 
+    margin-left: 10px;
+}
+
+.day-forcast {
+    width: 1130px;
 }
