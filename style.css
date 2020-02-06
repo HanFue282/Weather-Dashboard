@@ -65,3 +65,7 @@ p {
 .day-forcast {
     width: 1130px;
 }
+
+.active {
+    color: blueviolet;
+}
