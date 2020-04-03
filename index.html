@@ -107,8 +107,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
 
-function city(){        
-    var searchCity = $("#userInput").val();
+function city(param){        
+    var searchCity = param;
     var apiKey = "&APPID=84d508184938f06ffab36d310a17e774";
 
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + apiKey;
@@ -159,12 +159,11 @@ function city(){
 //When button is clicked, it'll search what's in the search bar.
 $("#findCity").on("click", function() {
     event.preventDefault();
-    city();
+    city( $("#userInput").val() );
 });
 
 $("a").on("click", function() {
-    $(this).text();
-    city();
+    city ( $(this).text() );
 })
 
     </script>
